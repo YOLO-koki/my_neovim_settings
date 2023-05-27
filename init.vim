@@ -33,6 +33,13 @@ Plug 'tpope/vim-commentary'
 
 " 自動補完（？）
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+Plug 'mattn/vim-goimports'
+
+
 Plug 'preservim/nerdtree'
 
 " なんか色々便利にする（？）
@@ -116,3 +123,15 @@ augroup htmldjango_prettier
 autocmd!
 autocmd BufWritePost htmldjango call CocAction('format')
 augroup END
+
+" Lsp Settings
+nmap <silent> gd :LspDefinition<CR>
+nmap <silent> <f2> :LspRename<CR>
+nmap <silent> <Leader>d :LspTypeDefinition<CR>
+nmap <silent> <Leader>r :LspReferences<CR>
+nmap <silent> <Leader>i :LspImplementation<CR>
+let g:lsp_diagnostics_enabled = 1
+let g:lsp_diagnostics_echo_cursor = 1
+let g:asyncomplete_popup_delay = 200
+let g:lsp_text_edit_enabled = 0
+
