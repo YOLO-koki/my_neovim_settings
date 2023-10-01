@@ -54,7 +54,7 @@ Plug 'vim-scripts/WebAPI.vim'
 " ソースコードの整形をする
 Plug 'prettier/vim-prettier', {
 \       'do': 'yarn install --frozen-lockfile --production',
-\       'for': ['javascript', 'javascript.jsx', 'typescript', 'css', 'json', 'html']
+\       'for': ['javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'css', 'json', 'html']
 \    }
 
 " 自動で閉じタグを生成する
@@ -73,7 +73,7 @@ Plug 'thinca/vim-quickrun'
 " リアルタイムでプレビューができるようにする
 Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
 
-Plug 'pangloss/vim-javascript', {'for': ['javascript', 'javascript.jsx']}
+Plug 'pangloss/vim-javascript', {'for': ['javascript', 'javascriptreact', 'typescript', 'typescriptreact']}
 Plug 'othree/yajs.vim'
 
 Plug 'cohama/lexima.vim'
@@ -100,7 +100,7 @@ let g:user_emmet_leader_key = '<c-x>'
 let user_emmet_install_global = 0
 
 " vim-closetag settings
-let g:closetag_filenames = '*.html,*.js,*.jsx'
+let g:closetag_filenames = '*.html,*.js,*.jsx,*.tsx'
 let g:closetag_shortcut = '<Tab>'
 
 " vim-quickrun settings
