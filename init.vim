@@ -94,7 +94,7 @@ nmap <C-p> <Plug>AirlineSelectPrevTab
 nmap <C-n> <Plug>AirlineSelectNextTab
 
 " emmet-vim-react-snippets & emmet-vim settings
-autocmd FileType css,html,javascript,javascriptreact EmmetInstall
+autocmd FileType css,html,javascript,javascriptreact,typescriptreact EmmetInstall
 let g:user_emmet_settings = webapi#json#decode(join(readfile(expand('~/.config/nvim/.snippets.json')), "\n"))
 let g:user_emmet_leader_key = '<c-x>'
 let user_emmet_install_global = 0
