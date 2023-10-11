@@ -16,6 +16,7 @@ set ruler
 set history=10000
 set shiftwidth=4
 set expandtab
+set clipboard+=unnamed
 syntax enable
 filetype on
 
