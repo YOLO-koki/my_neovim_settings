@@ -21,6 +21,9 @@ syntax enable
 filetype on
 
 call plug#begin('~/.config/nvim/plugged')
+" 曖昧検索
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " ステータスバーをモダンにする
 Plug 'vim-airline/vim-airline'
@@ -117,7 +120,7 @@ let g:prettier#config#print_width = 100
 
 augroup fmt
 autocmd!
-autocmd BufWritePost *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.svelte,*.yaml,*.html :PrettierAsync
+autocmd BufWritePost *.js,*.jsx,*.cjs,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.svelte,*.yaml,*.html :PrettierAsync
 augroup END
 
 augroup htmldjango_prettier
@@ -135,5 +138,6 @@ let g:lsp_diagnostics_enabled = 1
 let g:lsp_diagnostics_echo_cursor = 1
 let g:asyncomplete_popup_delay = 200
 let g:lsp_text_edit_enabled = 0
-let g:lsp_settings = {'typescript-language-server': {'whitelist': ['typescript', 'typescriptreact']}}
+let g:lsp_settings_filetype_typescript = ['typescript-language-server']
+let g:lsp_settings_filetype_typescriptreact = ['typescript-language-server']
 
