@@ -141,3 +141,6 @@ let g:lsp_text_edit_enabled = 0
 let g:lsp_settings_filetype_typescript = ['typescript-language-server']
 let g:lsp_settings_filetype_typescriptreact = ['typescript-language-server']
 
+" fzf Settings
+nnoremap <silent> fz :Files<CR>
+nnoremap <silent> bz :Buffers<CR>
